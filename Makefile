@@ -1,5 +1,5 @@
-#CXX = 
-
+CXX = riscv64-linux-gnu-g++
+CXXFLAGS = -static
 UNAME := $(shell uname -s)
 ifeq ($(UNAME), Darwin)
 LINKOPTIONS = -Wl,-search_paths_first -Wl,-dead_strip -v
@@ -13,7 +13,7 @@ WARNINGS = -Wall -Wextra -Werror
 
 MAIN 	= xml2json.o
 OBJECTS = xml2json.gch
-EXEC 	= xml2json
+EXEC 	= xml2json.rv
 
 #############################################################
 
